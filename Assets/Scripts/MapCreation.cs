@@ -76,4 +76,13 @@ public class MapCreation : MonoBehaviour {
 	private void CreateEnemy(){
 		CreateItem(itemList[6],new Vector3(EnemyWhere[Random.Range(0,EnemyWhere.Length)],6,0),Quaternion.identity);
 	}
+	
+	bool InvalidBonusPos(){
+		//
+	}
+	private void GenerateBonus(){
+		GameObject bonusItem = bonusItem [Random.Range(0, bonusCrate.Length)];
+		Instantiate(bonusItem, creatPosition, Quaterion.identify);
+		
+	}
 }
